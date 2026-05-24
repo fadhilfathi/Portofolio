@@ -1,0 +1,90 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: "20"
+
+jobs:
+  # ---- Lint & Build ----
+  build:
+    name: Lint & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linter
+        run: npm run lint -- --max-warnings=0
+
+      - name: Build application
+        run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: next-build
+          path: .next/
+          retention-days: 1
+
+  # ---- Docker Build Check ----
+  docker:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t portfolio:latest .
+
+      - name: Test Docker image
+        run: |
+          docker run -d --name portfolio-test -p 3000:3000 portfolio:latest
+          sleep 10
+          docker exec portfolio-test wget --no-verbose --tries=1 --spider http://localhost:3000/api/health
+          docker stop portfolio-test
+          docker rm portfolio-test
+
+  # ---- Deploy (extend this job for your platform) ----
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: [build, docker]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: next-build
+          path: .next/
+
+      # ---- Add your deployment steps here ----
+      # Examples:
+      # - Deploy to Vercel: uses amondnet/vercel-action
+      # - Deploy to AWS: uses aws-actions/configure-aws-credentials
+      # - Deploy to a server: uses appleboy/ssh-action
+      # - Push to registry: docker push
+
+      - name: Placeholder — add deployment target
+        run: echo "✅ Build & Docker checks passed. Add your deployment steps in this job."
