@@ -5,15 +5,23 @@ export default function Hero() {
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl" />
 
+      {/* Grid overlay */}
+      <div className="absolute inset-0 grid-pattern opacity-30" />
+
       <div className="text-center max-w-3xl relative z-10">
-        <div className="mb-6 animate-fade-in">
-          <span className="text-6xl">👋</span>
+        <div className="mb-6 animate-fade-in inline-flex items-center justify-center">
+          <span className="text-5xl font-mono font-bold text-blue-400/80 border-2 border-blue-500/30 rounded-lg px-4 py-2 pulse-glow">
+            {'{ }'}
+          </span>
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent animate-fade-in-up">
           Hi, I&apos;m Muh. Fadhil Fathi Rizal
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed animate-fade-in-up">
           DevOps Engineer | Kubernetes | CI/CD | Docker
+        </p>
+        <p className="text-gray-500 mb-8 max-w-xl mx-auto text-sm animate-fade-in-up animate-delay-200">
+          Building and automating infrastructure for reliable, scalable deployments.
         </p>
         <div className="flex gap-4 justify-center flex-wrap animate-fade-in-up">
           <a

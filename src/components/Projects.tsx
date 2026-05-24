@@ -5,7 +5,6 @@ interface Project {
   link?: string;
 }
 
-/* TODO: Update links with actual project URLs */
 const projects: Project[] = [
   {
     title: "CI/CD Pipeline Automation",
@@ -42,8 +41,7 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-        A selection of projects I&apos;ve worked on, ranging from web applications
-        to data visualization tools.
+        A selection of DevOps and infrastructure projects I&apos;ve worked on, ranging from CI/CD automation to Kubernetes management.
       </p>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((project, index) => (

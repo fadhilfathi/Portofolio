@@ -12,11 +12,32 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = navLinks.map((l) => l.href.slice(1));
+    const observers: IntersectionObserver[] = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { rootMargin: "-50% 0px -50% 0px" }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
   }, []);
 
   return (
@@ -42,6 +63,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className="hover:text-white transition-colors relative group"
+              aria-current={activeSection === link.href.slice(1) ? true : undefined}
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all group-hover:w-full" />
@@ -77,6 +99,7 @@ export default function Navbar() {
                 href={link.href}
                 className="text-gray-400 hover:text-white transition-colors"
                 onClick={() => setMobileOpen(false)}
+              aria-current={activeSection === link.href.slice(1) ? true : undefined}
               >
                 {link.label}
               </a>

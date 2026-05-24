@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   # ---- Development (hot-reload) ----
   app-dev:
@@ -35,6 +33,7 @@ services:
       - NEXT_TELEMETRY_DISABLED=1
       - PORT=3000
     restart: unless-stopped
+    init: true
     profiles:
       - prod
     healthcheck:

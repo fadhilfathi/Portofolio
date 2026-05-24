@@ -33,7 +33,13 @@ docker-compose.yml
 coverage
 .nyc_output
 
-# Misc
+# Documentation (not needed in the image)
 README.md
+PROJECT_SUMMARY.md
 LICENSE
+
+# TypeScript build info
+*.tsbuildinfo
+
+# CI/CD
 .github

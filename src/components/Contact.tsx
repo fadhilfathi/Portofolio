@@ -13,7 +13,7 @@ export default function Contact() {
           ✉️ Email Me
         </a>
         <a
-          href="https://wa.me/085290383202"
+          href="https://wa.me/6285290383202"
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-4 border border-gray-600 hover:border-gray-400 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-white/5 inline-flex items-center justify-center gap-2"
