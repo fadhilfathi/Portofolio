@@ -8,31 +8,31 @@ interface Project {
 /* TODO: Update links with actual project URLs */
 const projects: Project[] = [
   {
+    title: "CI/CD Pipeline Automation",
+    description:
+      "End-to-end CI/CD pipeline with automated testing, building, and deployment using GitHub Actions and ArgoCD.",
+    tags: ["GitHub Actions", "ArgoCD", "Docker", "Kubernetes"],
+    link: "#",
+  },
+  {
+    title: "Kubernetes Cluster Management",
+    description:
+      "Production-grade Kubernetes cluster setup with monitoring, auto-scaling, and service mesh.",
+    tags: ["Kubernetes", "Helm", "Prometheus", "Istio"],
+    link: "#",
+  },
+  {
+    title: "Infrastructure Monitoring Dashboard",
+    description:
+      "Real-time infrastructure monitoring with alerting, log aggregation, and visualization.",
+    tags: ["Grafana", "Prometheus", "ELK Stack"],
+    link: "#",
+  },
+  {
     title: "Portfolio Website",
     description:
       "Modern personal portfolio built with Next.js and Tailwind CSS. Features responsive design, smooth animations, and dark mode.",
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    link: "#",
-  },
-  {
-    title: "E-Commerce Platform",
-    description:
-      "Full-stack e-commerce solution with product catalog, cart, checkout, and payment integration.",
-    tags: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    link: "#",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "Collaborative task management tool with real-time updates, drag-and-drop, and team workspaces.",
-    tags: ["React", "Firebase", "Material UI"],
-    link: "#",
-  },
-  {
-    title: "Analytics Dashboard",
-    description:
-      "Interactive data visualization dashboard with charts, filters, and export capabilities.",
-    tags: ["React", "D3.js", "Python", "FastAPI"],
     link: "#",
   },
 ];

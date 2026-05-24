@@ -1,20 +1,20 @@
 const aboutCards = [
   {
-    icon: "💻",
-    title: "Development",
-    description: "Building modern web applications with React, Next.js, and TypeScript.",
+    icon: "🔄",
+    title: "CI/CD Pipelines",
+    description: "Managing and maintaining CI/CD pipelines — automating build, test, and deployment workflows for reliable software delivery.",
     accent: "blue",
   },
   {
-    icon: "🤖",
-    title: "AI & Automation",
-    description: "Exploring AI agents, LLMs, and intelligent automation workflows.",
+    icon: "☸️",
+    title: "Kubernetes Administration",
+    description: "Cluster management, deployments, scaling, and core Kubernetes operations for enterprise environments.",
     accent: "purple",
   },
   {
-    icon: "📊",
-    title: "Data & Analytics",
-    description: "Turning data into insights with Python, SQL, and visualization tools.",
+    icon: "🏗️",
+    title: "DevOps & Infrastructure",
+    description: "Docker containerization, Linux server management, scripting/automation, monitoring, and cloud/on-premise infrastructure support.",
     accent: "green",
   },
 ];
@@ -30,7 +30,7 @@ export default function About() {
     <section id="about" className="py-20 px-4 max-w-6xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-        Passionate developer with a love for clean code and great user experiences.
+        DevOps Engineer at PT. Prima Vista Solusi, specializing in Kubernetes, CI/CD, and infrastructure automation.
       </p>
       <div className="grid md:grid-cols-3 gap-8">
         {aboutCards.map((card) => (

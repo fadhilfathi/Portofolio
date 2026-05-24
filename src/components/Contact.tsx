@@ -12,18 +12,21 @@ export default function Contact() {
         >
           ✉️ Email Me
         </a>
-        {/* TODO: Update hrefs with actual profile URLs */}
         <a
-          href="#"
+          href="https://wa.me/085290383202"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 border border-gray-600 hover:border-gray-400 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-white/5 inline-flex items-center justify-center gap-2"
+        >
+          💬 WhatsApp
+        </a>
+        <a
+          href="https://github.com/fadhilfathi"
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-8 py-4 border border-gray-600 hover:border-gray-400 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-white/5 inline-flex items-center justify-center gap-2"
         >
           🐙 GitHub
-        </a>
-        <a
-          href="#"
-          className="px-8 py-4 border border-gray-600 hover:border-gray-400 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-white/5 inline-flex items-center justify-center gap-2"
-        >
-          💼 LinkedIn
         </a>
       </div>
     </section>

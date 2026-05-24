@@ -32,7 +32,7 @@ export default function Navbar() {
           href="#"
           className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
         >
-          FF
+          MFF
         </a>
 
         {/* Desktop nav */}

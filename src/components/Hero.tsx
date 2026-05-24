@@ -10,11 +10,10 @@ export default function Hero() {
           <span className="text-6xl">👋</span>
         </div>
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent animate-fade-in-up">
-          Hi, I&apos;m Fathi
+          Hi, I&apos;m Muh. Fadhil Fathi Rizal
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 mb-8 leading-relaxed animate-fade-in-up">
-          Full-Stack Developer &amp; AI Enthusiast. I build modern web applications
-          and explore the intersection of technology and creativity.
+          DevOps Engineer | Kubernetes | CI/CD | Docker
         </p>
         <div className="flex gap-4 justify-center flex-wrap animate-fade-in-up">
           <a
