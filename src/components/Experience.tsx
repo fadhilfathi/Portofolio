@@ -17,8 +17,10 @@ const experiences: ExperienceItem[] = [
       "Containerizing applications with Docker and orchestrating microservices in production environments.",
       "Administering Linux servers, writing automation scripts, and supporting both cloud and on-premise infrastructure.",
       "Implementing monitoring and alerting solutions to ensure system reliability and performance.",
+      "Implementing Infrastructure as Code with Terraform and Ansible for automated provisioning and configuration management.",
+      "Managing cloud infrastructure on AWS and GCP, including networking, security, and cost optimization.",
     ],
-    tags: ["Kubernetes", "CI/CD", "Docker", "Linux", "Scripting", "Monitoring", "Cloud/On-Premise"],
+    tags: ["Kubernetes", "CI/CD", "Docker", "Linux", "Terraform", "Ansible", "AWS", "GCP", "Monitoring"],
   },
 ];
 

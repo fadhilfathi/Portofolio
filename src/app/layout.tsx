@@ -1,10 +1,35 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = "https://fadhilfathi.dev";
+
 export const metadata: Metadata = {
   title: "Muh. Fadhil Fathi Rizal — DevOps Engineer",
   description:
     "Personal portfolio of Muh. Fadhil Fathi Rizal — DevOps Engineer specializing in Kubernetes, CI/CD, Docker, and infrastructure automation. Built with Next.js and Tailwind CSS.",
+  openGraph: {
+    title: "Muh. Fadhil Fathi Rizal — DevOps Engineer",
+    description:
+      "DevOps portfolio showcasing Kubernetes, Docker, CI/CD, AWS, and infrastructure automation projects.",
+    url: siteUrl,
+    siteName: "Muh. Fadhil Fathi Rizal Portfolio",
+    images: [
+      {
+        url: `${siteUrl}/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Muh. Fadhil Fathi Rizal — DevOps Engineer Portfolio",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muh. Fadhil Fathi Rizal — DevOps Engineer",
+    description:
+      "DevOps portfolio showcasing Kubernetes, Docker, CI/CD, AWS, and infrastructure automation projects.",
+    images: [`${siteUrl}/og-image.jpg`],
+  },
 };
 
 export default function RootLayout({

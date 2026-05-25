@@ -7,32 +7,39 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "CI/CD Pipeline Automation",
-    description:
-      "End-to-end CI/CD pipeline with automated testing, building, and deployment using GitHub Actions and ArgoCD.",
-    tags: ["GitHub Actions", "ArgoCD", "Docker", "Kubernetes"],
-    link: "#",
-  },
-  {
     title: "Kubernetes Cluster Management",
     description:
-      "Production-grade Kubernetes cluster setup with monitoring, auto-scaling, and service mesh.",
+      "Production-grade Kubernetes cluster setup with monitoring, auto-scaling, and service mesh for high-availability workloads.",
     tags: ["Kubernetes", "Helm", "Prometheus", "Istio"],
-    link: "#",
+    link: "https://github.com/fadhilfathi",
   },
   {
-    title: "Infrastructure Monitoring Dashboard",
+    title: "CI/CD Pipeline Automation",
     description:
-      "Real-time infrastructure monitoring with alerting, log aggregation, and visualization.",
-    tags: ["Grafana", "Prometheus", "ELK Stack"],
-    link: "#",
+      "End-to-end CI/CD pipeline with automated testing, building, and deployment using Jenkins, GitLab CI, GitHub Actions, and ArgoCD.",
+    tags: ["Jenkins", "GitLab CI", "GitHub Actions", "ArgoCD"],
+    link: "https://github.com/fadhilfathi",
   },
   {
-    title: "Portfolio Website",
+    title: "Dockerized Application Deployment",
     description:
-      "Modern personal portfolio built with Next.js and Tailwind CSS. Features responsive design, smooth animations, and dark mode.",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    link: "#",
+      "Containerized microservices deployment with Docker Compose, multi-stage builds, and Helm charts for Kubernetes orchestration.",
+    tags: ["Docker", "Docker Compose", "Helm", "Kubernetes"],
+    link: "https://github.com/fadhilfathi",
+  },
+  {
+    title: "Monitoring & Observability Stack",
+    description:
+      "Real-time infrastructure monitoring with Prometheus, Grafana dashboards, alerting rules, and centralized log aggregation.",
+    tags: ["Prometheus", "Grafana", "Alerting", "Log Aggregation"],
+    link: "https://github.com/fadhilfathi",
+  },
+  {
+    title: "GitOps with ArgoCD",
+    description:
+      "Declarative GitOps workflow for Kubernetes deployments using ArgoCD, ensuring consistent and auditable infrastructure changes.",
+    tags: ["ArgoCD", "GitOps", "Kubernetes", "Helm"],
+    link: "https://github.com/fadhilfathi",
   },
 ];
 

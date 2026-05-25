@@ -28,6 +28,14 @@ export default function Contact() {
         >
           🐙 GitHub
         </a>
+        <a
+          href="https://linkedin.com/in/fadhilfathi"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-4 border border-gray-600 hover:border-gray-400 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-white/5 inline-flex items-center justify-center gap-2"
+        >
+          💼 LinkedIn
+        </a>
       </div>
     </section>
   );
