@@ -26,7 +26,7 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="experience" className="py-20 px-4 max-w-6xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-center mb-4">Experience</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
         Current role and responsibilities in the DevOps and infrastructure space.
@@ -65,14 +65,13 @@ export default function Experience() {
 
                 <ul className="space-y-2 mb-4">
                   {exp.descriptions.map((desc, i) => (
-                    <li key={i} className="text-gray-400 text-sm leading-relaxed flex items-start gap-2">
-                      <span className="text-blue-400 mt-1 flex-shrink-0">▸</span>
+                    <li key={i} className="text-gray-400 text-sm leading-relaxed">
                       {desc}
                     </li>
                   ))}
                 </ul>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center">
                   {exp.tags.map((tag) => (
                     <span
                       key={tag}

@@ -20,7 +20,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="skills" className="py-20 px-4 max-w-6xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-center mb-4">Skills & Expertise</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
         Core technologies and tools I work with daily to build and maintain robust infrastructure.

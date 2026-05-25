@@ -45,7 +45,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="projects" className="py-20 px-4 max-w-6xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
         A selection of DevOps and infrastructure projects I&apos;ve worked on, ranging from CI/CD automation to Kubernetes management.
@@ -62,7 +62,7 @@ export default function Projects() {
             <p className="text-gray-400 mb-4 leading-relaxed">
               {project.description}
             </p>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-4 justify-center">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -77,7 +77,7 @@ export default function Projects() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 transition-colors"
+                className="text-sm text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 transition-colors justify-center"
               >
                 View Project →
               </a>

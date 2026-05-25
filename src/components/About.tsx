@@ -27,7 +27,7 @@ const accentMap: Record<string, string> = {
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 max-w-6xl mx-auto">
+    <section id="about" className="py-20 px-4 max-w-6xl mx-auto text-center">
       <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
       <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
         DevOps Engineer at PT. Prima Vista Solusi, specializing in Kubernetes, CI/CD, and infrastructure automation.
