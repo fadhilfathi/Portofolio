@@ -45,12 +45,13 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 max-w-6xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
-      <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-        A selection of DevOps and infrastructure projects I&apos;ve worked on, ranging from CI/CD automation to Kubernetes management.
-      </p>
-      <div className="grid md:grid-cols-2 gap-8">
+    <section id="projects" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
+        <p className="text-gray-400 text-center mb-12 max-w-2xl">
+          A selection of DevOps and infrastructure projects I&apos;ve worked on, ranging from CI/CD automation to Kubernetes management.
+        </p>
+        <div className="grid md:grid-cols-2 gap-8 w-full">
         {projects.map((project, index) => (
           <div
             key={project.title}
@@ -84,6 +85,7 @@ export default function Projects() {
             )}
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

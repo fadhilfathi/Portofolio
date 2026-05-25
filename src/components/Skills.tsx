@@ -20,12 +20,13 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 max-w-6xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-center mb-4">Skills & Expertise</h2>
-      <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-        Core technologies and tools I work with daily to build and maintain robust infrastructure.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    <section id="skills" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center mb-4">Skills & Expertise</h2>
+        <p className="text-gray-400 text-center mb-12 max-w-2xl">
+          Core technologies and tools I work with daily to build and maintain robust infrastructure.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
         {skills.map((skill) => (
           <div
             key={skill.name}
@@ -43,6 +44,7 @@ export default function Skills() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

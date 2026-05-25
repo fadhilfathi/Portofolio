@@ -27,22 +27,24 @@ const accentMap: Record<string, string> = {
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 max-w-6xl mx-auto text-center">
-      <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
-      <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-        DevOps Engineer at PT. Prima Vista Solusi, specializing in Kubernetes, CI/CD, and infrastructure automation.
-      </p>
-      <div className="grid md:grid-cols-3 gap-8">
-        {aboutCards.map((card) => (
-          <div
-            key={card.title}
-            className={`bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${accentMap[card.accent]}`}
-          >
-            <div className="text-4xl mb-4">{card.icon}</div>
-            <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">{card.description}</p>
-          </div>
-        ))}
+    <section id="about" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
+        <p className="text-gray-400 text-center mb-12 max-w-2xl">
+          DevOps Engineer at PT. Prima Vista Solusi, specializing in Kubernetes, CI/CD, and infrastructure automation.
+        </p>
+        <div className="grid md:grid-cols-3 gap-8 w-full">
+          {aboutCards.map((card) => (
+            <div
+              key={card.title}
+              className={`bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${accentMap[card.accent]}`}
+            >
+              <div className="text-4xl mb-4">{card.icon}</div>
+              <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{card.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

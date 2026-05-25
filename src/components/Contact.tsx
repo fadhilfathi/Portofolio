@@ -1,11 +1,12 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-4 max-w-4xl mx-auto text-center">
-      <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
-      <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
-        Have a project in mind or just want to chat? Feel free to reach out!
-      </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <section id="contact" className="py-20 px-4">
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
+        <h2 className="text-4xl font-bold text-center mb-4">Get In Touch</h2>
+        <p className="text-gray-400 text-center mb-12 max-w-2xl">
+          Have a project in mind or just want to chat? Feel free to reach out!
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="mailto:fadhilfathi.rzm@gmail.com"
           className="px-8 py-4 bg-blue-600 hover:bg-blue-500 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-blue-500/25 inline-flex items-center justify-center gap-2"
@@ -36,6 +37,7 @@ export default function Contact() {
         >
           💼 LinkedIn
         </a>
+      </div>
       </div>
     </section>
   );
