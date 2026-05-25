@@ -9,14 +9,18 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main id="main-content" className="min-h-screen bg-gray-950 text-white">
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
+    <main id="main-content" className="min-h-screen bg-[#050508] text-gray-300 flex flex-col items-center">
+      <div className="w-full max-w-5xl px-6">
+        <Navbar />
+        <Hero />
+        <div className="space-y-16 py-12">
+          <About />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Contact />
+        </div>
+      </div>
       <Footer />
     </main>
   );

@@ -32,7 +32,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 sm:px-10 lg:px-16 pt-20 relative overflow-hidden">
       {/* Background: dark with subtle grid */}
       <div className="absolute inset-0 bg-[#0a0a0f]" />
       <div

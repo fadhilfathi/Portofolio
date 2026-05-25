@@ -45,7 +45,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-20 px-6 sm:px-10 lg:px-16">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <h2 className="text-4xl font-bold text-center mb-4">Projects</h2>
         <p className="text-gray-400 text-center mb-12 max-w-2xl">
@@ -55,15 +55,30 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={project.title}
-            className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group hover:-translate-y-1"
+            className="bg-gray-800/50 border border-gray-700 rounded-xl hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 group hover:-translate-y-1"
+            style={{
+              paddingLeft: '24px',
+              paddingRight: '24px',
+              paddingTop: '20px',
+              paddingBottom: '20px',
+            }}
           >
-            <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-400 transition-colors">
+            <h3
+              className="text-2xl font-semibold mb-4 group-hover:text-blue-400 transition-colors text-left"
+              style={{ paddingLeft: '4px', paddingRight: '4px' }}
+            >
               {project.title}
             </h3>
-            <p className="text-gray-400 mb-4 leading-relaxed">
+            <p
+              className="text-gray-400 mb-6 leading-relaxed text-left"
+              style={{ paddingLeft: '4px', paddingRight: '4px' }}
+            >
               {project.description}
             </p>
-            <div className="flex flex-wrap gap-2 mb-4 justify-center">
+            <div
+              className="flex flex-wrap gap-2 mb-6 justify-center"
+              style={{ paddingLeft: '4px', paddingRight: '4px' }}
+            >
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -74,14 +89,16 @@ export default function Projects() {
               ))}
             </div>
             {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 transition-colors justify-center"
-              >
-                View Project →
-              </a>
+              <div className="text-left" style={{ paddingLeft: '4px', paddingRight: '4px' }}>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 transition-colors"
+                >
+                  View Project →
+                </a>
+              </div>
             )}
           </div>
         ))}
